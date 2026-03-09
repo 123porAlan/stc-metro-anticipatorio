@@ -1,12 +1,12 @@
 # IA Anticipatoria - STC Metro CDMX
 
-[cite_start]**Alumno:** Alan Bellon García [cite: 2]
-**Asesor:** M. en Fil. [cite_start]C. Enrique Francisco Soto Astorga [cite: 3]
+**Alumno:** Alan Bellon García
+**Asesor:** M. en Fil. C. Enrique Francisco Soto Astorga
 
 ## Descripción del Proyecto
-[cite_start]Este repositorio contiene el código, la documentación y los experimentos para el proyecto de tesis: *"Modelado y prototipado de un sistema de Inteligencia Artificial Anticipatoria para la estimación de estados de congestión en el STC Metro de la Ciudad de México"*[cite: 4, 5].
+Este repositorio contiene el código, la documentación y los experimentos para el proyecto de tesis: *"Modelado y prototipado de un sistema de Inteligencia Artificial Anticipatoria para la estimación de estados de congestión en el STC Metro de la Ciudad de México"*[cite: 4, 5].
 
-[cite_start]El objetivo principal es desarrollar un prototipo basado en Inteligencia Artificial Anticipatoria para el modelado y la previsión de estados de saturación en la red del STC Metro[cite: 6, 7]. [cite_start]Ante la complejidad de acceder a flujos de datos masivos en tiempo real, el comportamiento del sistema se validará mediante la generación de un dataset sintético y un entorno de simulación[cite: 7, 9, 18].
+El objetivo principal es desarrollar un prototipo basado en Inteligencia Artificial Anticipatoria para el modelado y la previsión de estados de saturación en la red del STC Metro[cite: 6, 7]. [cite_start]Ante la complejidad de acceder a flujos de datos masivos en tiempo real, el comportamiento del sistema se validará mediante la generación de un dataset sintético y un entorno de simulación[cite: 7, 9, 18].
 
 ## Estado Actual y Contenido del Repositorio
 Actualmente, el proyecto se encuentra en la fase inicial de definición y análisis exploratorio de datos (EDA) sobre los históricos de afluencia.
