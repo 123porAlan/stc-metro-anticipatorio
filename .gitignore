@@ -1,0 +1,39 @@
+# =========================
+# Python y Entornos Virtuales
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# =========================
+# Datasets y bases de datos
+# =========================
+# Ignoramos los CSV para no saturar GitHub con los históricos de afluencia
+*.csv
+*.tsv
+*.dat
+*.sqlite3
+data/
+datasets/
+
+# =========================
+# Notebooks y Análisis
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Editores de texto y SO
+# =========================
+# Archivos temporales de Neovim, Vim, Helix, etc.
+*.swp
+*.swo
+*~
+.hx/
+.netrwhist
+
+# Archivos de sistemas operativos (macOS, Windows, Linux)
+.DS_Store
+Thumbs.db
