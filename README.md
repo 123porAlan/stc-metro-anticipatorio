@@ -1,27 +1,45 @@
-# IA Anticipatoria - STC Metro CDMX
+# STC Metro Anticipatorio 🚇
 
-**Alumno:** Alan Bellon García
-**Asesor:** M. en Fil. C. Enrique Francisco Soto Astorga
+**Modelado y prototipado de un sistema de Inteligencia Artificial Anticipatoria para la estimación de estados de congestión en el STC Metro de la Ciudad de México**.
 
-## Descripción del Proyecto
-Este repositorio contiene el código, la documentación y los experimentos para el proyecto de tesis: *"Modelado y prototipado de un sistema de Inteligencia Artificial Anticipatoria para la estimación de estados de congestión en el STC Metro de la Ciudad de México"*.
+Este repositorio contiene los scripts de procesamiento de datos, modelado topológico y algoritmos de simulación desarrollados para la construcción de un sistema de Inteligencia Artificial Anticipatoria. El objetivo principal es prever estados de saturación en la red del Metro en escenarios de horizonte corto (10 - 60 minutos) mediante el uso de datos sintéticos y grafos ponderados.
 
-El objetivo principal es desarrollar un prototipo basado en Inteligencia Artificial Anticipatoria para el modelado y la previsión de estados de saturación en la red del STC Metro. Ante la complejidad de acceder a flujos de datos masivos en tiempo real, el comportamiento del sistema se validará mediante la generación de un dataset sintético y un entorno de simulación.
+## 📌 Estado Actual del Proyecto
 
-## Estado Actual y Contenido del Repositorio
-Actualmente, el proyecto ha avanzado desde la fase de análisis exploratorio de datos (EDA) hacia el modelado topológico de la infraestructura de la red utilizando datos en formato GTFS.
+Actualmente, el proyecto ha completado la fase de **Construcción de la Base Empírica e Infraestructura de Datos**. Se han desarrollado los motores que transforman la información estática gubernamental en un entorno dinámico listo para el entrenamiento de la IA.
 
-### Documentación
-* **Propuesta de Tesis:** Documento que detalla los objetivos, hipótesis, justificación y el aparato teórico fundamental (sistemas anticipatorios, teoría de grafos y aprendizaje automático) que guiará la investigación.
+### 1. Modelado Topológico y Pesos Estáticos
 
-### Análisis Exploratorio de Datos (EDA) y Modelado
-Se incluyen los scripts en Python para la limpieza, visualización de datos de afluencia y la construcción inicial del modelo de la red:
-* `exploracion_afluencia.py`: Script para cargar el dataset de afluencia, revisar la estructura de memoria, estandarizar formatos de fecha y visualizar la afluencia diaria total de la red.
-* `comparacion_lineas.py`: Script enfocado en filtrar, limpiar errores de codificación (encoding) y generar una gráfica comparativa de series temporales entre la afluencia de la Línea 1 y la Línea 2.
-* `grafo_metro.py`: Script que procesa los archivos GTFS (`routes.txt`, `trips.txt`, `stops.txt`, `stop_times.txt`) para construir la representación topológica de la red del STC Metro. Genera un grafo bidireccional donde los nodos representan las estaciones y las aristas las conexiones, visualizando el mapa de la red.
+* **Script:** `grafo_metro.py`
+* **Descripción:** Aísla la topología exclusiva del STC Metro a partir de archivos GTFS masivos del Valle de México. Construye un grafo matemático $G = (V, E, W)$ que conecta cronológicamente los 195 nodos (estaciones).
+* **Logro:** Calcula el "peso estático" de cada arista (el tiempo de viaje ideal en minutos/segundos) cruzando los tiempos de llegada y salida históricos.
 
-## Tecnologías Utilizadas (Hasta el momento)
-* **Lenguaje:** Python
-* **Manejo de Datos:** Pandas
-* **Teoría de Grafos y Redes:** NetworkX
-* **Visualización:** Matplotlib, Seaborn
+### 2. Motor Sintético de Demanda (Afluencia Horaria)
+
+* **Script:** `generador_sintetico_horario.py`
+* **Descripción:** Expande el consolidado de afluencia diaria hacia una granularidad de alta frecuencia (por hora). Implementa un motor de distribución bimodal que clasifica las estaciones en tres perfiles (`origen`, `destino` y `mixto`) para simular la asimetría real de las horas pico matutinas y vespertinas.
+* **Logro:** Genera el dataset maestro limpio y sin errores de codificación (`afluencia_sintetica_horaria_avanzada_2026.csv`), dotando al sistema de la dimensión temporal necesaria para simular estrés.
+
+### 3. Exploración Histórica
+
+* **Scripts:** `exploracion_gtfs.py`, `exploracion_afluencia.py`, `comparacion_lineas.py`
+* **Descripción:** Herramientas de validación de datos para la identificación de anomalías y disrupciones pasadas.
+
+## 🚀 Próximos Pasos (En Desarrollo)
+
+* **Integración de Congestión (`simulador_congestion.py`):** Cruce del volumen de pasajeros sintéticos con los pesos del grafo para alterar dinámicamente los tiempos de viaje en función del nivel de saturación de las estaciones.
+* **Diseño del Algoritmo de Búsqueda de Rutas:** Integración de la métrica predictiva en el cálculo de caminos óptimos.
+* **Despliegue del Entorno de Simulación:** Pruebas de estrés de la IA Anticipatoria.
+
+## 🛠️ Tecnologías y Dependencias
+
+* `Python 3.x`
+* `Pandas` (Procesamiento vectorial de alta eficiencia y manejo de DataFrames)
+* `NetworkX` (Construcción y análisis de la topología de red)
+* `Matplotlib` (Visualización del esqueleto del grafo)
+
+---
+
+*Autor:* Alan Bellon García
+
+
