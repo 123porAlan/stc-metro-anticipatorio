@@ -2,6 +2,15 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
+def gtfs_time_to_seconds(time_str):
+    """Convierte el formato HH:MM:SS de GTFS a segundos totales, soportando > 24h."""
+    if pd.isna(time_str):
+        return None
+    h, m, s = map(int, str(time_str).split(":"))
+    return h * 3600 + m * 60 + s
+
+
 print("Cargando y filtrando datos GTFS del Metro...")
 
 # 1. Filtros base (nuestra llave maestra)
@@ -31,27 +40,75 @@ for index, row in estaciones_metro.iterrows():
 
 print(f"Nodos (Estaciones) creados: {G_metro.number_of_nodes()}")
 
-# 3. Construcción de las Aristas (Conexiones)
-print("Calculando conexiones entre estaciones...")
-# Ordenamos por viaje y por secuencia de parada para asegurar el orden cronológico
+# 3. Construcción de Aristas y Cálculo de Pesos (Tiempos de Viaje)
+print("Calculando conexiones y tiempos de viaje estáticos...")
+
+# Convertimos los tiempos a segundos
+df_stop_times_metro["arrival_sec"] = df_stop_times_metro["arrival_time"].apply(
+    gtfs_time_to_seconds
+)
+df_stop_times_metro["departure_sec"] = df_stop_times_metro["departure_time"].apply(
+    gtfs_time_to_seconds
+)
+
+# Ordenamos estrictamente por viaje y secuencia de parada
 df_stop_times_metro = df_stop_times_metro.sort_values(by=["trip_id", "stop_sequence"])
 
-# Agrupamos por viaje y conectamos las estaciones consecutivas
-for trip_id, group in df_stop_times_metro.groupby("trip_id"):
-    secuencia_paradas = group["stop_id"].tolist()
-    # Conectamos la parada actual con la siguiente
-    for i in range(len(secuencia_paradas) - 1):
-        origen = secuencia_paradas[i]
-        destino = secuencia_paradas[i + 1]
-        G_metro.add_edge(origen, destino)
+tiempos_tramos = {}
 
-print(f"Aristas (Conexiones) creadas: {G_metro.number_of_edges()}")
+# Agrupamos por viaje y procesamos las paradas consecutivas
+for trip_id, group in df_stop_times_metro.groupby("trip_id"):
+    paradas = group.to_dict("records")
+
+    for i in range(len(paradas) - 1):
+        origen = paradas[i]["stop_id"]
+        destino = paradas[i + 1]["stop_id"]
+
+        # Conectamos la parada actual con la siguiente (si no existe la arista, se crea)
+        if not G_metro.has_edge(origen, destino):
+            G_metro.add_edge(origen, destino)
+
+        tiempo_salida = paradas[i]["departure_sec"]
+        tiempo_llegada = paradas[i + 1]["arrival_sec"]
+
+        if tiempo_salida is not None and tiempo_llegada is not None:
+            delta_segundos = tiempo_llegada - tiempo_salida
+
+            # Filtramos deltas ilógicos (menores a 0 o mayores a 30 mins entre dos estaciones)
+            if 0 < delta_segundos < 1800:
+                tramo = tuple(
+                    sorted((origen, destino))
+                )  # Usamos sorted para grafos no dirigidos
+                if tramo not in tiempos_tramos:
+                    tiempos_tramos[tramo] = []
+                tiempos_tramos[tramo].append(delta_segundos)
+
+# Promediamos los tiempos y los asignamos como peso definitivo a las aristas
+for (nodo1, nodo2), tiempos in tiempos_tramos.items():
+    if G_metro.has_edge(nodo1, nodo2):
+        tiempo_promedio_segundos = sum(tiempos) / len(tiempos)
+        G_metro[nodo1][nodo2]["weight"] = round(tiempo_promedio_segundos, 2)
+        G_metro[nodo1][nodo2]["tiempo_minutos"] = round(
+            tiempo_promedio_segundos / 60, 2
+        )
+
+print(f"Aristas (Conexiones) creadas y pesadas: {G_metro.number_of_edges()}")
+
+# Para verificar que funcionó, imprimimos una muestra de las aristas con sus pesos
+print("\nMuestra de conexiones y tiempos base (sin congestión):")
+for idx, (u, v, data) in enumerate(G_metro.edges(data=True)):
+    nombre_u = G_metro.nodes[u]["nombre"]
+    nombre_v = G_metro.nodes[v]["nombre"]
+    minutos = data.get("tiempo_minutos", "Desconocido")
+    print(f"- De {nombre_u} a {nombre_v}: {minutos} mins")
+    if idx >= 4:  # Mostramos solo las primeras 5
+        break
+print()
 
 # 4. Dibujar el Grafo Completo
 print("Generando mapa topológico completo...")
 plt.figure(figsize=(12, 12))
 
-# Dibujamos nodos
 nx.draw_networkx_nodes(
     G_metro,
     posiciones,
@@ -60,10 +117,9 @@ nx.draw_networkx_nodes(
     edgecolors="black",
     alpha=0.9,
 )
-# Dibujamos aristas
 nx.draw_networkx_edges(G_metro, posiciones, edge_color="gray", width=1.5, alpha=0.6)
 
-plt.title("Topología de Red del STC Metro (Nodos y Aristas)", fontsize=16)
+plt.title("Topología de Red del STC Metro (Nodos y Aristas con Pesos)", fontsize=16)
 plt.xlabel("Longitud", fontsize=12)
 plt.ylabel("Latitud", fontsize=12)
 plt.grid(True, linestyle="--", alpha=0.5)
