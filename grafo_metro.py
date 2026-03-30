@@ -14,17 +14,17 @@ def gtfs_time_to_seconds(time_str):
 print("Cargando y filtrando datos GTFS del Metro...")
 
 # 1. Filtros base (nuestra llave maestra)
-df_routes = pd.read_csv("routes.txt", encoding="utf-8-sig", low_memory=False)
+df_routes = pd.read_csv("datos_crudos/routes.txt", encoding="utf-8-sig", low_memory=False)
 rutas_metro = df_routes[df_routes["agency_id"] == "METRO"]["route_id"].unique()
 
-df_trips = pd.read_csv("trips.txt", encoding="utf-8-sig", low_memory=False)
+df_trips = pd.read_csv("datos_crudos/trips.txt", encoding="utf-8-sig", low_memory=False)
 viajes_metro = df_trips[df_trips["route_id"].isin(rutas_metro)]["trip_id"].unique()
 
-df_stop_times = pd.read_csv("stop_times.txt", encoding="utf-8-sig", low_memory=False)
+df_stop_times = pd.read_csv("datos_crudos/stop_times.txt", encoding="utf-8-sig", low_memory=False)
 # Filtramos solo los tiempos de parada que pertenecen al Metro
 df_stop_times_metro = df_stop_times[df_stop_times["trip_id"].isin(viajes_metro)].copy()
 
-df_stops = pd.read_csv("stops.txt", encoding="utf-8-sig", low_memory=False)
+df_stops = pd.read_csv("datos_crudos/stops.txt", encoding="utf-8-sig", low_memory=False)
 estaciones_metro = df_stops[
     df_stops["stop_id"].isin(df_stop_times_metro["stop_id"].unique())
 ]

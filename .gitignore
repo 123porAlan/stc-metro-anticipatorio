@@ -37,3 +37,6 @@ datasets/
 # Archivos de sistemas operativos (macOS, Windows, Linux)
 .DS_Store
 Thumbs.db
+
+datos_crudos/
+datos_procesados/

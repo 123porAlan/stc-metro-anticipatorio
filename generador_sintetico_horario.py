@@ -1,7 +1,7 @@
 import pandas as pd
 
 print("Cargando dataset de afluencia diaria...")
-df_diario = pd.read_csv("afluenciastc_desglosado_01_2026.csv")
+df_diario = pd.read_csv("datos_crudos/afluenciastc_desglosado_01_2026.csv")
 
 
 def limpiar_texto(texto):
@@ -191,7 +191,7 @@ df_horario = df_horario.drop(columns=columnas_borrar).sort_values(
 # Filtramos las horas donde el metro está cerrado (0 a 4 AM) si no queremos que aparezcan
 df_horario = df_horario[df_horario["hora"] >= 5]
 
-archivo_salida = "afluencia_sintetica_horaria_avanzada_2026.csv"
+archivo_salida = "datos_procesados/afluencia_sintetica_horaria_avanzada_2026.csv"
 df_horario.to_csv(archivo_salida, index=False, encoding="utf-8-sig")
 
 print(f"\n¡Proceso finalizado! Dataset avanzado guardado como: {archivo_salida}")
