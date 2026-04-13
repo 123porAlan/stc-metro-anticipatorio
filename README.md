@@ -25,9 +25,23 @@ Actualmente, el proyecto ha completado la fase de **Construcción de la Base Emp
 * **Scripts:** `exploracion_gtfs.py`, `exploracion_afluencia.py`, `comparacion_lineas.py`
 * **Descripción:** Herramientas de validación de datos para la identificación de anomalías y disrupciones pasadas.
 
-## 🚀 Próximos Pasos (En Desarrollo)
+### 4. Simulación de Congestión Dinámica (Motor de Estrés)
 
-* **Integración de Congestión (`simulador_congestion.py`):** Cruce del volumen de pasajeros sintéticos con los pesos del grafo para alterar dinámicamente los tiempos de viaje en función del nivel de saturación de las estaciones.
+* Script: simulador_congestion.py
+
+* Descripción: Representa el puente matemático entre la infraestructura física y el flujo de pasajeros. Utiliza una adaptación de la Función de Retraso de la BPR (Bureau of Public Roads) para inyectar realismo físico al grafo.
+
+* Funcionalidad Detallada:
+
+  * Penalización por Saturación: El script implementa la relación Volumen/Capacidad (V/C). No suma minutos de forma lineal, sino que aplica una penalización exponencial a los pesos de las aristas cuando la afluencia en una estación se aproxima a su límite técnico.
+
+  * Generación de Grafos Temporales: Transforma el grafo estático en una serie de "fotografías horarias" de la red. Esto permite que el sistema registre cómo el tiempo de viaje en un mismo tramo (ej. Pantitlán-Zaragoza) fluctúa dinámicamente según la hora del día.
+
+  * Modelado de Fricción en Andén: Simula matemáticamente los retrasos operativos causados por el exceso de usuarios, como la dificultad en el cierre de puertas y el aumento en los tiempos de intercambio (boarding/alighting).
+
+* Logro: Provee el entorno de simulación necesario para generar los labels (datos etiquetados) de entrenamiento. Con esto, el sistema ahora puede comparar estados "ideales" vs "congestivos", permitiendo que la IA aprenda a pronosticar saturaciones en horizontes de 10 a 60 minutos.
+
+## 🚀 Próximos Pasos (En Desarrollo)
 * **Diseño del Algoritmo de Búsqueda de Rutas:** Integración de la métrica predictiva en el cálculo de caminos óptimos.
 * **Despliegue del Entorno de Simulación:** Pruebas de estrés de la IA Anticipatoria.
 
@@ -37,6 +51,7 @@ Actualmente, el proyecto ha completado la fase de **Construcción de la Base Emp
 * `Pandas` (Procesamiento vectorial de alta eficiencia y manejo de DataFrames)
 * `NetworkX` (Construcción y análisis de la topología de red)
 * `Matplotlib` (Visualización del esqueleto del grafo)
+* NumPy (Cálculo numérico avanzado para funciones de penalización)
 
 ---
 
