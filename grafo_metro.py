@@ -127,3 +127,9 @@ plt.axis("on")
 plt.tight_layout()
 
 plt.show()
+
+# --- EXPORTAR GRAFO PARA EL SIMULADOR ---
+print("Exportando el grafo base para el simulador...")
+# Guardamos el grafo en formato GEXF (estándar para grafos)
+nx.write_gexf(G_metro, "grafo_base_metro.gexf")
+print("¡Grafo base exportado exitosamente como 'grafo_base_metro.gexf'!")

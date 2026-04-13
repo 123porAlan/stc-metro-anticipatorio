@@ -1,7 +1,7 @@
 import pandas as pd
 
 print("Cargando dataset de afluencia diaria...")
-df_diario = pd.read_csv("datos_crudos/afluenciastc_desglosado_01_2026.csv")
+df_diario = pd.read_csv("afluenciastc_desglosado_01_2026.csv")
 
 
 def limpiar_texto(texto):
