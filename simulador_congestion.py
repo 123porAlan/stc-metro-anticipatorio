@@ -34,13 +34,13 @@ print("Iniciando motor de simulación horaria...")
 
 # Supongamos una capacidad base teórica por hora para las estaciones. 
 # En tu tesis puedes refinar esto dependiendo de la línea.
-CAPACIDAD_PROMEDIO_HORA = 5000 
+CAPACIDAD_PROMEDIO_HORA = 1000
 
 # Diccionario para almacenar los estados de la red en cada hora
 grafos_temporales = {}
 
 # Filtramos un día específico para la simulación (Ej. 2026-01-01)
-fecha_simulacion = "2026-01-01"
+fecha_simulacion = "2026-01-13"
 df_dia = df_afluencia[df_afluencia['fecha'] == fecha_simulacion]
 
 # Simulamos desde las 5:00 AM hasta las 11:00 PM (23:00)
@@ -63,6 +63,10 @@ for hora in horas_operacion:
         # Obtenemos la afluencia de la estación de origen en esta hora
         # Si no hay datos, asumimos 0 (sin congestión)
         pasajeros_origen = afluencia_dict.get(nombre_origen, 0)
+
+        # Pon esto temporalmente dentro del loop de aristas:
+        if nombre_origen == "Pantitlán" and hora == 7:
+            print(f"DEBUG - Pantitlán a las 7 AM: {pasajeros_origen} pasajeros detectados.")
         
         tiempo_ideal = data.get('tiempo_minutos', 2.0) # Tiempo ideal base
         
