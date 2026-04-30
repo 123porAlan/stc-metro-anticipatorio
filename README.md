@@ -27,19 +27,33 @@ Actualmente, el proyecto ha completado la fase de **Construcción de la Base Emp
 
 ### 4. Simulación de Congestión Dinámica (Motor de Estrés)
 
-* Script: simulador_congestion.py
+* **Script:** `simulador_congestion.py`
+* **Descripción:** Representa el puente matemático entre la infraestructura física y el flujo de pasajeros. Transforma la red estática en un entorno dinámico utilizando una adaptación de la Función de Retraso de la BPR (Bureau of Public Roads) para inyectar realismo físico al grafo.
 
-* Descripción: Representa el puente matemático entre la infraestructura física y el flujo de pasajeros. Utiliza una adaptación de la Función de Retraso de la BPR (Bureau of Public Roads) para inyectar realismo físico al grafo.
+**Funcionalidad Detallada y Metodología Matemática:**
 
-* Funcionalidad Detallada:
+* **Penalización por Saturación (Función BPR):** El script implementa la relación Volumen/Capacidad (V/C). No suma minutos de forma lineal, sino que aplica una penalización exponencial a los pesos de las aristas cuando la afluencia en una estación se aproxima a su límite técnico. La penalización se calcula con la siguiente formulación:
 
-  * Penalización por Saturación: El script implementa la relación Volumen/Capacidad (V/C). No suma minutos de forma lineal, sino que aplica una penalización exponencial a los pesos de las aristas cuando la afluencia en una estación se aproxima a su límite técnico.
+  $$T_c = T_b \times \left(1 + \alpha \left(\frac{V}{C}\right)^\beta \right)$$
 
-  * Generación de Grafos Temporales: Transforma el grafo estático en una serie de "fotografías horarias" de la red. Esto permite que el sistema registre cómo el tiempo de viaje en un mismo tramo (ej. Pantitlán-Zaragoza) fluctúa dinámicamente según la hora del día.
+  Donde:
+  * **$T_c$**: Tiempo con congestión (peso dinámico de la arista).
+  * **$T_b$**: Tiempo base o ideal en minutos.
+  * **$V$**: Volumen actual de pasajeros inyectado por el dataset sintético.
+  * **$C$**: Capacidad teórica calibrada del andén/estación.
+  * **$\alpha$ y $\beta$**: Parámetros de sensibilidad de la curva ($\alpha = 0.15$, $\beta = 4$).
 
-  * Modelado de Fricción en Andén: Simula matemáticamente los retrasos operativos causados por el exceso de usuarios, como la dificultad en el cierre de puertas y el aumento en los tiempos de intercambio (boarding/alighting).
+* **Calibración y Fricción de Andén:** La capacidad teórica se calibró para representar el umbral crítico donde comienza la **fricción de andén** (retrasos operativos causados por el exceso de usuarios, dificultad en el cierre de puertas y aumento en los tiempos de intercambio). En tramos críticos durante la hora pico, esto inyecta un incremento realista del ~40% en tiempos de traslado inmediatos.
+* **Generación de Grafos Temporales:** Transforma el grafo estático en una serie de "fotografías horarias" de la red. Esto permite que el sistema registre cómo el tiempo de viaje en un mismo tramo (ej. Pantitlán-Zaragoza) fluctúa dinámicamente según la hora del día.
+* **Logro:** Provee el entorno de simulación necesario para generar los *labels* (datos etiquetados) de entrenamiento. Con esto, el sistema ahora puede comparar estados "ideales" vs "congestivos", permitiendo que la IA aprenda a pronosticar saturaciones en horizontes de 10 a 60 minutos.
 
-* Logro: Provee el entorno de simulación necesario para generar los labels (datos etiquetados) de entrenamiento. Con esto, el sistema ahora puede comparar estados "ideales" vs "congestivos", permitiendo que la IA aprenda a pronosticar saturaciones en horizontes de 10 a 60 minutos.
+**Ejecución:**
+Para correr la simulación y generar los estados dinámicos de la red:
+```bash
+python simulador_congestion.py
+```
+
+***
 
 ## 🚀 Próximos Pasos (En Desarrollo)
 * **Diseño del Algoritmo de Búsqueda de Rutas:** Integración de la métrica predictiva en el cálculo de caminos óptimos.
