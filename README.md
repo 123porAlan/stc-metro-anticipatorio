@@ -55,9 +55,18 @@ python simulador_congestion.py
 
 ***
 
-## 🚀 Próximos Pasos (En Desarrollo)
-* **Diseño del Algoritmo de Búsqueda de Rutas:** Integración de la métrica predictiva en el cálculo de caminos óptimos.
-* **Despliegue del Entorno de Simulación:** Pruebas de estrés de la IA Anticipatoria.
+## Estado de la Simulación y Construcción del Ambiente
+
+Actualmente, el entorno de simulación central está construido y funcional. Se ha completado la integración entre el flujo externo de usuarios y la topología interna de la red del metro:
+
+* **Construcción del Dataset de Ambiente (Matriz O-D):** Se implementó un modelo de gravedad que distribuye probabilísticamente los viajes de acuerdo al perfil espaciotemporal de cada estación (origen, destino o mixto). Esto genera una matriz sintética de Origen-Destino que emula con alta fidelidad las entradas y salidas reales de pasajeros a través de los torniquetes a lo largo del día.
+* **Snapshots Dinámicos de Congestión:** El simulador fue modificado para realizar enrutamiento de pasajeros sobre el grafo topológico (`grafo_metro.py`). Utilizando una función de penalización adaptada (BPR), el sistema calcula el impacto de la carga de pasajeros en cada tramo de vía y toma *snapshots* (fotografías de estado) cada hora. Esto genera nuestro dataset tabular de entrenamiento, el cual contiene la memoria temporal de la red ($t-1, t, t+1$).
+
+### Próximos Pasos (Fase Anticipatoria)
+
+El proyecto se encuentra listo para iniciar la fase núcleo de la Inteligencia Artificial Anticipatoria (Paso 3):
+
+* **Bucle de Aprendizaje por Fracaso:** Se implementará un ciclo interactivo donde el modelo utilice sus propias predicciones para enrutar a los pasajeros, enfrentándose a las consecuencias de sus decisiones (colapsos y fallos en la red). El modelo iterará sobre estos errores, reevaluándose continuamente hasta converger en una estrategia predictiva que logre equilibrar las cargas de manera dinámica, cumpliendo con los principios de los sistemas anticipatorios.
 
 ## 🛠️ Tecnologías y Dependencias
 
