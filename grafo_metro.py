@@ -105,6 +105,37 @@ for idx, (u, v, data) in enumerate(G_metro.edges(data=True)):
         break
 print()
 
+
+# --- AGREGAR TRANSBORDOS PEATONALES ---
+print("Agregando conexiones peatonales (Transbordos) entre líneas...")
+
+estaciones_por_nombre = {}
+for n, data in G_metro.nodes(data=True):
+    nombre = data.get('nombre')
+    if nombre not in estaciones_por_nombre:
+        estaciones_por_nombre[nombre] = []
+    estaciones_por_nombre[nombre].append(n)
+
+transbordos_creados = 0
+for nombre, andenes in estaciones_por_nombre.items():
+    if len(andenes) > 1: # Si tiene más de 1 andén, es estación de correspondencia
+        for i in range(len(andenes)):
+            for j in range(i + 1, len(andenes)):
+                nodo_a = andenes[i]
+                nodo_b = andenes[j]
+                
+                # Penalización estándar por caminar entre líneas: 5 minutos (300 segundos)
+                # Puedes calibrar esto después si quieres transbordos más largos (ej. Atlalilco)
+                tiempo_caminata = 5.0 
+                
+                G_metro.add_edge(nodo_a, nodo_b, weight=tiempo_caminata, tiempo_minutos=tiempo_caminata, tipo="transbordo")
+                transbordos_creados += 1
+
+print(f"Transbordos creados: {transbordos_creados}")
+# ----------------------------------------------------
+
+
+
 # 4. Dibujar el Grafo Completo
 print("Generando mapa topológico completo...")
 plt.figure(figsize=(12, 12))

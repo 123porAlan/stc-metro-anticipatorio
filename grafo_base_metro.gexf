@@ -1,11 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2026-04-12">
+  <meta lastmodifieddate="2026-05-13">
     <creator>NetworkX 3.6.1</creator>
   </meta>
   <graph defaultedgetype="undirected" mode="static" name="">
     <attributes mode="static" class="edge">
       <attribute id="1" title="tiempo_minutos" type="double" />
+      <attribute id="2" title="tipo" type="string" />
     </attributes>
     <attributes mode="static" class="node">
       <attribute id="0" title="nombre" type="string" />
@@ -1048,857 +1049,1079 @@
           <attvalue for="1" value="4.78" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-MEXICALTZINGO" target="B_020L12-ERMITA" id="12" weight="266.0">
+      <edge source="B_020L12-ATLALILCO" target="B_0200L8-ATLALILCO" id="12" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_020L12-MEXICALTZINGO" target="B_020L12-ERMITA" id="13" weight="266.0">
         <attvalues>
           <attvalue for="1" value="4.43" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-ERMITA" target="B_020L12-EJECENTRAL" id="13" weight="142.0">
+      <edge source="B_020L12-ERMITA" target="B_020L12-EJECENTRAL" id="14" weight="142.0">
         <attvalues>
           <attvalue for="1" value="2.37" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-EJECENTRAL" target="B_020L12-PARQUEVENADOS" id="14" weight="198.0">
+      <edge source="B_020L12-ERMITA" target="B_0200L2-ERMITA" id="15" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_020L12-EJECENTRAL" target="B_020L12-PARQUEVENADOS" id="16" weight="198.0">
         <attvalues>
           <attvalue for="1" value="3.3" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-PARQUEVENADOS" target="B_020L12-ZAPATA" id="15" weight="100.0">
+      <edge source="B_020L12-PARQUEVENADOS" target="B_020L12-ZAPATA" id="17" weight="100.0">
         <attvalues>
           <attvalue for="1" value="1.67" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-ZAPATA" target="B_020L12-HOSPITAL20" id="16" weight="77.0">
+      <edge source="B_020L12-ZAPATA" target="B_020L12-HOSPITAL20" id="18" weight="77.0">
         <attvalues>
           <attvalue for="1" value="1.28" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-HOSPITAL20" target="B_020L12-INSURGENTESSUR" id="17" weight="108.0">
+      <edge source="B_020L12-ZAPATA" target="B_0200L3-ZAPATA" id="19" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_020L12-HOSPITAL20" target="B_020L12-INSURGENTESSUR" id="20" weight="108.0">
         <attvalues>
           <attvalue for="1" value="1.8" />
         </attvalues>
       </edge>
-      <edge source="B_020L12-INSURGENTESSUR" target="B_020L12-MIXCOAC" id="18" weight="125.0">
+      <edge source="B_020L12-INSURGENTESSUR" target="B_020L12-MIXCOAC" id="21" weight="125.0">
         <attvalues>
           <attvalue for="1" value="2.08" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-BUENAVISTA" target="B_0200LB-GUERRERO" id="19" weight="75.0">
+      <edge source="B_020L12-MIXCOAC" target="B_0200L7-MIXCOAC" id="22" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LB-BUENAVISTA" target="B_0200LB-GUERRERO" id="23" weight="75.0">
         <attvalues>
           <attvalue for="1" value="1.25" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-GUERRERO" target="B_0200LB-GARIBALDI" id="20" weight="100.0">
+      <edge source="B_0200LB-GUERRERO" target="B_0200LB-GARIBALDI" id="24" weight="100.0">
         <attvalues>
           <attvalue for="1" value="1.67" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-GARIBALDI" target="B_0200LB-LAGUNILLA" id="21" weight="91.0">
+      <edge source="B_0200LB-GUERRERO" target="B_0200L3-GUERRERO" id="25" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LB-GARIBALDI" target="B_0200LB-LAGUNILLA" id="26" weight="91.0">
         <attvalues>
           <attvalue for="1" value="1.52" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-LAGUNILLA" target="B_0200LB-TEPITO" id="22" weight="73.0">
+      <edge source="B_0200LB-GARIBALDI" target="B_0200L8-GARIBALDI" id="27" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LB-LAGUNILLA" target="B_0200LB-TEPITO" id="28" weight="73.0">
         <attvalues>
           <attvalue for="1" value="1.22" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-TEPITO" target="B_0200LB-MORELOS" id="23" weight="73.0">
+      <edge source="B_0200LB-TEPITO" target="B_0200LB-MORELOS" id="29" weight="73.0">
         <attvalues>
           <attvalue for="1" value="1.22" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-MORELOS" target="B_0200LB-SANLAZARO" id="24" weight="158.0">
+      <edge source="B_0200LB-MORELOS" target="B_0200LB-SANLAZARO" id="30" weight="158.0">
         <attvalues>
           <attvalue for="1" value="2.63" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-SANLAZARO" target="B_0200LB-RFLORESMAGON" id="25" weight="122.0">
+      <edge source="B_0200LB-MORELOS" target="B_0200L4-MORELOS" id="31" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LB-SANLAZARO" target="B_0200LB-RFLORESMAGON" id="32" weight="122.0">
         <attvalues>
           <attvalue for="1" value="2.03" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-RFLORESMAGON" target="B_0200LB-ROMERORUBIO" id="26" weight="125.0">
+      <edge source="B_0200LB-SANLAZARO" target="B_0200L1-SANLAZARO" id="33" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LB-RFLORESMAGON" target="B_0200LB-ROMERORUBIO" id="34" weight="125.0">
         <attvalues>
           <attvalue for="1" value="2.08" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-ROMERORUBIO" target="B_0200LB-OCEANIA" id="27" weight="103.0">
+      <edge source="B_0200LB-ROMERORUBIO" target="B_0200LB-OCEANIA" id="35" weight="103.0">
         <attvalues>
           <attvalue for="1" value="1.72" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-OCEANIA" target="B_0200LB-DPVOOCEANIA" id="28" weight="116.0">
+      <edge source="B_0200LB-OCEANIA" target="B_0200LB-DPVOOCEANIA" id="36" weight="116.0">
         <attvalues>
           <attvalue for="1" value="1.93" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-DPVOOCEANIA" target="B_0200LB-BOSQUEARAGON" id="29" weight="149.0">
+      <edge source="B_0200LB-OCEANIA" target="B_0200L5-OCEANIA" id="37" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LB-DPVOOCEANIA" target="B_0200LB-BOSQUEARAGON" id="38" weight="149.0">
         <attvalues>
           <attvalue for="1" value="2.48" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-BOSQUEARAGON" target="B_0200LB-VILLAARAGON" id="30" weight="106.0">
+      <edge source="B_0200LB-BOSQUEARAGON" target="B_0200LB-VILLAARAGON" id="39" weight="106.0">
         <attvalues>
           <attvalue for="1" value="1.77" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-VILLAARAGON" target="B_0200LB-NEZAHUALCO" id="31" weight="169.0">
+      <edge source="B_0200LB-VILLAARAGON" target="B_0200LB-NEZAHUALCO" id="40" weight="169.0">
         <attvalues>
           <attvalue for="1" value="2.82" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-NEZAHUALCO" target="B_0200LB-IMPULSORA" id="32" weight="175.0">
+      <edge source="B_0200LB-NEZAHUALCO" target="B_0200LB-IMPULSORA" id="41" weight="175.0">
         <attvalues>
           <attvalue for="1" value="2.92" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-IMPULSORA" target="B_0200LB-RIOREMEDIOS" id="33" weight="67.0">
+      <edge source="B_0200LB-IMPULSORA" target="B_0200LB-RIOREMEDIOS" id="42" weight="67.0">
         <attvalues>
           <attvalue for="1" value="1.12" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-RIOREMEDIOS" target="B_0200LB-MUZQUIZ" id="34" weight="147.0">
+      <edge source="B_0200LB-RIOREMEDIOS" target="B_0200LB-MUZQUIZ" id="43" weight="147.0">
         <attvalues>
           <attvalue for="1" value="2.45" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-MUZQUIZ" target="B_0200LB-ECATEPEC" id="35" weight="186.0">
+      <edge source="B_0200LB-MUZQUIZ" target="B_0200LB-ECATEPEC" id="44" weight="186.0">
         <attvalues>
           <attvalue for="1" value="3.1" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-ECATEPEC" target="B_0200LB-OLIMPICA" id="36" weight="85.0">
+      <edge source="B_0200LB-ECATEPEC" target="B_0200LB-OLIMPICA" id="45" weight="85.0">
         <attvalues>
           <attvalue for="1" value="1.42" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-OLIMPICA" target="B_0200LB-PLAZAARAGON" id="37" weight="97.0">
+      <edge source="B_0200LB-OLIMPICA" target="B_0200LB-PLAZAARAGON" id="46" weight="97.0">
         <attvalues>
           <attvalue for="1" value="1.62" />
         </attvalues>
       </edge>
-      <edge source="B_0200LB-PLAZAARAGON" target="B_0200LB-CIUDADAZTECA" id="38" weight="82.0">
+      <edge source="B_0200LB-PLAZAARAGON" target="B_0200LB-CIUDADAZTECA" id="47" weight="82.0">
         <attvalues>
           <attvalue for="1" value="1.37" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-LAPAZ" target="B_0200LA-LOSREYES" id="39" weight="208.0">
+      <edge source="B_0200LA-LAPAZ" target="B_0200LA-LOSREYES" id="48" weight="208.0">
         <attvalues>
           <attvalue for="1" value="3.47" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-LOSREYES" target="B_0200LA-STAMARTA" id="40" weight="191.0">
+      <edge source="B_0200LA-LOSREYES" target="B_0200LA-STAMARTA" id="49" weight="191.0">
         <attvalues>
           <attvalue for="1" value="3.18" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-STAMARTA" target="B_0200LA-ACATITLA" id="41" weight="123.0">
+      <edge source="B_0200LA-STAMARTA" target="B_0200LA-ACATITLA" id="50" weight="123.0">
         <attvalues>
           <attvalue for="1" value="2.05" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-ACATITLA" target="B_0200LA-PENONVIEJO" id="42" weight="151.0">
+      <edge source="B_0200LA-ACATITLA" target="B_0200LA-PENONVIEJO" id="51" weight="151.0">
         <attvalues>
           <attvalue for="1" value="2.52" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-PENONVIEJO" target="B_0200LA-GUELATAO" id="43" weight="233.0">
+      <edge source="B_0200LA-PENONVIEJO" target="B_0200LA-GUELATAO" id="52" weight="233.0">
         <attvalues>
           <attvalue for="1" value="3.88" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-GUELATAO" target="B_0200LA-TEPALCATES" id="44" weight="129.0">
+      <edge source="B_0200LA-GUELATAO" target="B_0200LA-TEPALCATES" id="53" weight="129.0">
         <attvalues>
           <attvalue for="1" value="2.15" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-TEPALCATES" target="B_0200LA-CANALSANJUAN" id="45" weight="159.0">
+      <edge source="B_0200LA-TEPALCATES" target="B_0200LA-CANALSANJUAN" id="54" weight="159.0">
         <attvalues>
           <attvalue for="1" value="2.65" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-CANALSANJUAN" target="B_0200LA-AGRICOLA" id="46" weight="123.0">
+      <edge source="B_0200LA-CANALSANJUAN" target="B_0200LA-AGRICOLA" id="55" weight="123.0">
         <attvalues>
           <attvalue for="1" value="2.05" />
         </attvalues>
       </edge>
-      <edge source="B_0200LA-AGRICOLA" target="B_0200LA-PANTITLAN" id="47" weight="153.0">
+      <edge source="B_0200LA-AGRICOLA" target="B_0200LA-PANTITLAN" id="56" weight="153.0">
         <attvalues>
           <attvalue for="1" value="2.55" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-PANTITLAN" target="B_0200L9-PUEBLA" id="48" weight="148.5">
+      <edge source="B_0200LA-PANTITLAN" target="B_0200L9-PANTITLAN" id="57" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LA-PANTITLAN" target="B_0200L5-PANTITLAN" id="58" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200LA-PANTITLAN" target="B_0200L1-PANTITLAN" id="59" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-PANTITLAN" target="B_0200L9-PUEBLA" id="60" weight="148.5">
         <attvalues>
           <attvalue for="1" value="2.48" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-PUEBLA" target="B_0200L9-CIUDADDVA" id="49" weight="110.5">
+      <edge source="B_0200L9-PANTITLAN" target="B_0200L5-PANTITLAN" id="61" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-PANTITLAN" target="B_0200L1-PANTITLAN" id="62" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-PUEBLA" target="B_0200L9-CIUDADDVA" id="63" weight="110.5">
         <attvalues>
           <attvalue for="1" value="1.84" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-CIUDADDVA" target="B_0200L9-VELODROMO" id="50" weight="139.5">
+      <edge source="B_0200L9-CIUDADDVA" target="B_0200L9-VELODROMO" id="64" weight="139.5">
         <attvalues>
           <attvalue for="1" value="2.33" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-VELODROMO" target="B_0200L9-MIXIUHCA" id="51" weight="121.0">
+      <edge source="B_0200L9-VELODROMO" target="B_0200L9-MIXIUHCA" id="65" weight="121.0">
         <attvalues>
           <attvalue for="1" value="2.02" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-MIXIUHCA" target="B_0200L9-JAMAICA" id="52" weight="115.0">
+      <edge source="B_0200L9-MIXIUHCA" target="B_0200L9-JAMAICA" id="66" weight="115.0">
         <attvalues>
           <attvalue for="1" value="1.92" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-JAMAICA" target="B_0200L9-CHABACANO" id="53" weight="132.0">
+      <edge source="B_0200L9-JAMAICA" target="B_0200L9-CHABACANO" id="67" weight="132.0">
         <attvalues>
           <attvalue for="1" value="2.2" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-CHABACANO" target="B_0200L9-LAZAROCAR" id="54" weight="115.0">
+      <edge source="B_0200L9-JAMAICA" target="B_0200L4-JAMAICA" id="68" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-CHABACANO" target="B_0200L9-LAZAROCAR" id="69" weight="115.0">
         <attvalues>
           <attvalue for="1" value="1.92" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-LAZAROCAR" target="B_0200L9-CENTROMEDICO" id="55" weight="121.0">
+      <edge source="B_0200L9-CHABACANO" target="B_0200L8-CHABACANO" id="70" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-CHABACANO" target="B_0200L2-CHABACANO" id="71" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-LAZAROCAR" target="B_0200L9-CENTROMEDICO" id="72" weight="121.0">
         <attvalues>
           <attvalue for="1" value="2.02" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-CENTROMEDICO" target="B_0200L9-CHILPANCINGO" id="56" weight="139.5">
+      <edge source="B_0200L9-CENTROMEDICO" target="B_0200L9-CHILPANCINGO" id="73" weight="139.5">
         <attvalues>
           <attvalue for="1" value="2.33" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-CHILPANCINGO" target="B_0200L9-PATRIOTISMO" id="57" weight="110.5">
+      <edge source="B_0200L9-CENTROMEDICO" target="B_0200L3-CENTROMEDICO" id="74" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-CHILPANCINGO" target="B_0200L9-PATRIOTISMO" id="75" weight="110.5">
         <attvalues>
           <attvalue for="1" value="1.84" />
         </attvalues>
       </edge>
-      <edge source="B_0200L9-PATRIOTISMO" target="B_0200L9-TACUBAYA" id="58" weight="148.5">
+      <edge source="B_0200L9-PATRIOTISMO" target="B_0200L9-TACUBAYA" id="76" weight="148.5">
         <attvalues>
           <attvalue for="1" value="2.48" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-CONST1917" target="B_0200L8-UAM-I" id="59" weight="135.0">
+      <edge source="B_0200L9-TACUBAYA" target="B_0200L7-TACUBAYA" id="77" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L9-TACUBAYA" target="B_0200L1-TACUBAYA" id="78" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L8-CONST1917" target="B_0200L8-UAM-I" id="79" weight="135.0">
         <attvalues>
           <attvalue for="1" value="2.25" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-UAM-I" target="B_0200L8-CERROESTRELLA" id="60" weight="132.0">
+      <edge source="B_0200L8-UAM-I" target="B_0200L8-CERROESTRELLA" id="80" weight="132.0">
         <attvalues>
           <attvalue for="1" value="2.2" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-CERROESTRELLA" target="B_0200L8-IZTAPALAPA" id="61" weight="96.0">
+      <edge source="B_0200L8-CERROESTRELLA" target="B_0200L8-IZTAPALAPA" id="81" weight="96.0">
         <attvalues>
           <attvalue for="1" value="1.6" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-IZTAPALAPA" target="B_0200L8-ATLALILCO" id="62" weight="89.0">
+      <edge source="B_0200L8-IZTAPALAPA" target="B_0200L8-ATLALILCO" id="82" weight="89.0">
         <attvalues>
           <attvalue for="1" value="1.48" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-ATLALILCO" target="B_0200L8-ESCUADRON" id="63" weight="198.0">
+      <edge source="B_0200L8-ATLALILCO" target="B_0200L8-ESCUADRON" id="83" weight="198.0">
         <attvalues>
           <attvalue for="1" value="3.3" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-ESCUADRON" target="B_0200L8-ACULCO" id="64" weight="99.0">
+      <edge source="B_0200L8-ESCUADRON" target="B_0200L8-ACULCO" id="84" weight="99.0">
         <attvalues>
           <attvalue for="1" value="1.65" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-ACULCO" target="B_0200L8-APATLACO" id="65" weight="71.0">
+      <edge source="B_0200L8-ACULCO" target="B_0200L8-APATLACO" id="85" weight="71.0">
         <attvalues>
           <attvalue for="1" value="1.18" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-APATLACO" target="B_0200L8-IZTACALCO" id="66" weight="111.0">
+      <edge source="B_0200L8-APATLACO" target="B_0200L8-IZTACALCO" id="86" weight="111.0">
         <attvalues>
           <attvalue for="1" value="1.85" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-IZTACALCO" target="B_0200L8-COYUYA" id="67" weight="120.0">
+      <edge source="B_0200L8-IZTACALCO" target="B_0200L8-COYUYA" id="87" weight="120.0">
         <attvalues>
           <attvalue for="1" value="2.0" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-COYUYA" target="B_0200L8-STAANITA" id="68" weight="122.0">
+      <edge source="B_0200L8-COYUYA" target="B_0200L8-STAANITA" id="88" weight="122.0">
         <attvalues>
           <attvalue for="1" value="2.03" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-STAANITA" target="B_0200L8-LAVIGA" id="69" weight="82.0">
+      <edge source="B_0200L8-STAANITA" target="B_0200L8-LAVIGA" id="89" weight="82.0">
         <attvalues>
           <attvalue for="1" value="1.37" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-LAVIGA" target="B_0200L8-CHABACANO" id="70" weight="101.0">
+      <edge source="B_0200L8-STAANITA" target="B_0200L4-SNTAANITA" id="90" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L8-LAVIGA" target="B_0200L8-CHABACANO" id="91" weight="101.0">
         <attvalues>
           <attvalue for="1" value="1.68" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-CHABACANO" target="B_0200L8-OBRERA" id="71" weight="136.0">
+      <edge source="B_0200L8-CHABACANO" target="B_0200L8-OBRERA" id="92" weight="136.0">
         <attvalues>
           <attvalue for="1" value="2.27" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-OBRERA" target="B_0200L8-DOCTORES" id="72" weight="97.0">
+      <edge source="B_0200L8-CHABACANO" target="B_0200L2-CHABACANO" id="93" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L8-OBRERA" target="B_0200L8-DOCTORES" id="94" weight="97.0">
         <attvalues>
           <attvalue for="1" value="1.62" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-DOCTORES" target="B_0200L8-SALTOAGUA" id="73" weight="73.0">
+      <edge source="B_0200L8-DOCTORES" target="B_0200L8-SALTOAGUA" id="95" weight="73.0">
         <attvalues>
           <attvalue for="1" value="1.22" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-SALTOAGUA" target="B_0200L8-SANJUANLETRAN" id="74" weight="45.0">
+      <edge source="B_0200L8-SALTOAGUA" target="B_0200L8-SANJUANLETRAN" id="96" weight="45.0">
         <attvalues>
           <attvalue for="1" value="0.75" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-SANJUANLETRAN" target="B_0200L8-BELLASARTES" id="75" weight="63.0">
+      <edge source="B_0200L8-SALTOAGUA" target="B_0200L1-SALTODELAGUA" id="97" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L8-SANJUANLETRAN" target="B_0200L8-BELLASARTES" id="98" weight="63.0">
         <attvalues>
           <attvalue for="1" value="1.05" />
         </attvalues>
       </edge>
-      <edge source="B_0200L8-BELLASARTES" target="B_0200L8-GARIBALDI" id="76" weight="83.0">
+      <edge source="B_0200L8-BELLASARTES" target="B_0200L8-GARIBALDI" id="99" weight="83.0">
         <attvalues>
           <attvalue for="1" value="1.38" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-BARRANCA" target="B_0200L7-MIXCOAC" id="77" weight="160.0">
+      <edge source="B_0200L8-BELLASARTES" target="B_0200L2-BELLASARTES" id="100" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L7-BARRANCA" target="B_0200L7-MIXCOAC" id="101" weight="160.0">
         <attvalues>
           <attvalue for="1" value="2.67" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-MIXCOAC" target="B_0200L7-SANANTONIO" id="78" weight="87.0">
+      <edge source="B_0200L7-MIXCOAC" target="B_0200L7-SANANTONIO" id="102" weight="87.0">
         <attvalues>
           <attvalue for="1" value="1.45" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-SANANTONIO" target="B_0200L7-SANPEDROPINOS" id="79" weight="77.0">
+      <edge source="B_0200L7-SANANTONIO" target="B_0200L7-SANPEDROPINOS" id="103" weight="77.0">
         <attvalues>
           <attvalue for="1" value="1.28" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-SANPEDROPINOS" target="B_0200L7-TACUBAYA" id="80" weight="121.0">
+      <edge source="B_0200L7-SANPEDROPINOS" target="B_0200L7-TACUBAYA" id="104" weight="121.0">
         <attvalues>
           <attvalue for="1" value="2.02" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-TACUBAYA" target="B_0200L7-CONSTITUYENTES" id="81" weight="113.0">
+      <edge source="B_0200L7-TACUBAYA" target="B_0200L7-CONSTITUYENTES" id="105" weight="113.0">
         <attvalues>
           <attvalue for="1" value="1.88" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-CONSTITUYENTES" target="B_0200L7-AUDITORIO" id="82" weight="161.0">
+      <edge source="B_0200L7-TACUBAYA" target="B_0200L1-TACUBAYA" id="106" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L7-CONSTITUYENTES" target="B_0200L7-AUDITORIO" id="107" weight="161.0">
         <attvalues>
           <attvalue for="1" value="2.68" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-AUDITORIO" target="B_0200L7-POLANCO" id="83" weight="84.0">
+      <edge source="B_0200L7-AUDITORIO" target="B_0200L7-POLANCO" id="108" weight="84.0">
         <attvalues>
           <attvalue for="1" value="1.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-POLANCO" target="B_0200L7-SANJOAQUIN" id="84" weight="128.0">
+      <edge source="B_0200L7-POLANCO" target="B_0200L7-SANJOAQUIN" id="109" weight="128.0">
         <attvalues>
           <attvalue for="1" value="2.13" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-SANJOAQUIN" target="B_0200L7-TACUBA" id="85" weight="154.0">
+      <edge source="B_0200L7-SANJOAQUIN" target="B_0200L7-TACUBA" id="110" weight="154.0">
         <attvalues>
           <attvalue for="1" value="2.57" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-TACUBA" target="B_0200L7-REFINERIA" id="86" weight="142.0">
+      <edge source="B_0200L7-TACUBA" target="B_0200L7-REFINERIA" id="111" weight="142.0">
         <attvalues>
           <attvalue for="1" value="2.37" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-REFINERIA" target="B_0200L7-CAMARONES" id="87" weight="104.0">
+      <edge source="B_0200L7-TACUBA" target="B_0200L2-TACUBA" id="112" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L7-REFINERIA" target="B_0200L7-CAMARONES" id="113" weight="104.0">
         <attvalues>
           <attvalue for="1" value="1.73" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-CAMARONES" target="B_0200L7-AQUILESSERD" id="88" weight="146.0">
+      <edge source="B_0200L7-CAMARONES" target="B_0200L7-AQUILESSERD" id="114" weight="146.0">
         <attvalues>
           <attvalue for="1" value="2.43" />
         </attvalues>
       </edge>
-      <edge source="B_0200L7-AQUILESSERD" target="B_0200L7-ELROSARIO" id="89" weight="176.0">
+      <edge source="B_0200L7-AQUILESSERD" target="B_0200L7-ELROSARIO" id="115" weight="176.0">
         <attvalues>
           <attvalue for="1" value="2.93" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-MARTINCARR" target="B_0200L6-LAVILLA" id="90" weight="117.0">
+      <edge source="B_0200L7-ELROSARIO" target="B_0200L6-ELROSARIO" id="116" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L6-MARTINCARR" target="B_0200L6-LAVILLA" id="117" weight="117.0">
         <attvalues>
           <attvalue for="1" value="1.95" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-LAVILLA" target="B_0200L6-DTVO18MARZO" id="91" weight="70.0">
+      <edge source="B_0200L6-MARTINCARR" target="B_0200L4-MARTINCARR" id="118" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L6-LAVILLA" target="B_0200L6-DTVO18MARZO" id="119" weight="70.0">
         <attvalues>
           <attvalue for="1" value="1.17" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-DTVO18MARZO" target="B_0200L6-LINDAVISTA" id="92" weight="109.0">
+      <edge source="B_0200L6-DTVO18MARZO" target="B_0200L6-LINDAVISTA" id="120" weight="109.0">
         <attvalues>
           <attvalue for="1" value="1.82" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-LINDAVISTA" target="B_0200L6-ITOPETROLEO" id="93" weight="132.0">
+      <edge source="B_0200L6-DTVO18MARZO" target="B_0200L3-DTVO18MARZO" id="121" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L6-LINDAVISTA" target="B_0200L6-ITOPETROLEO" id="122" weight="132.0">
         <attvalues>
           <attvalue for="1" value="2.2" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-ITOPETROLEO" target="B_0200L6-VALLEJO" id="94" weight="84.0">
+      <edge source="B_0200L6-ITOPETROLEO" target="B_0200L6-VALLEJO" id="123" weight="84.0">
         <attvalues>
           <attvalue for="1" value="1.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-VALLEJO" target="B_0200L6-NORTE45" id="95" weight="78.0">
+      <edge source="B_0200L6-ITOPETROLEO" target="B_0200L5-ITOPETROLEO" id="124" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L6-VALLEJO" target="B_0200L6-NORTE45" id="125" weight="78.0">
         <attvalues>
           <attvalue for="1" value="1.3" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-NORTE45" target="B_0200L6-FERRERIA" id="96" weight="115.0">
+      <edge source="B_0200L6-NORTE45" target="B_0200L6-FERRERIA" id="126" weight="115.0">
         <attvalues>
           <attvalue for="1" value="1.92" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-FERRERIA" target="B_0200L6-AZCAPOTZALCO" id="97" weight="122.0">
+      <edge source="B_0200L6-FERRERIA" target="B_0200L6-AZCAPOTZALCO" id="127" weight="122.0">
         <attvalues>
           <attvalue for="1" value="2.03" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-AZCAPOTZALCO" target="B_0200L6-TEZOZOMOC" id="98" weight="105.0">
+      <edge source="B_0200L6-AZCAPOTZALCO" target="B_0200L6-TEZOZOMOC" id="128" weight="105.0">
         <attvalues>
           <attvalue for="1" value="1.75" />
         </attvalues>
       </edge>
-      <edge source="B_0200L6-TEZOZOMOC" target="B_0200L6-ELROSARIO" id="99" weight="131.0">
+      <edge source="B_0200L6-TEZOZOMOC" target="B_0200L6-ELROSARIO" id="129" weight="131.0">
         <attvalues>
           <attvalue for="1" value="2.18" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-PANTITLAN" target="B_0200L5-HANGARES" id="100" weight="180.0">
+      <edge source="B_0200L5-PANTITLAN" target="B_0200L5-HANGARES" id="130" weight="180.0">
         <attvalues>
           <attvalue for="1" value="3.0" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-HANGARES" target="B_0200L5-TNALAEREA" id="101" weight="140.0">
+      <edge source="B_0200L5-PANTITLAN" target="B_0200L1-PANTITLAN" id="131" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L5-HANGARES" target="B_0200L5-TNALAEREA" id="132" weight="140.0">
         <attvalues>
           <attvalue for="1" value="2.33" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-TNALAEREA" target="B_0200L5-OCEANIA" id="102" weight="130.0">
+      <edge source="B_0200L5-TNALAEREA" target="B_0200L5-OCEANIA" id="133" weight="130.0">
         <attvalues>
           <attvalue for="1" value="2.17" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-OCEANIA" target="B_0200L5-ARAGON" id="103" weight="134.0">
+      <edge source="B_0200L5-OCEANIA" target="B_0200L5-ARAGON" id="134" weight="134.0">
         <attvalues>
           <attvalue for="1" value="2.23" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-ARAGON" target="B_0200L5-EDUARDOMOLI" id="104" weight="102.0">
+      <edge source="B_0200L5-ARAGON" target="B_0200L5-EDUARDOMOLI" id="135" weight="102.0">
         <attvalues>
           <attvalue for="1" value="1.7" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-EDUARDOMOLI" target="B_0200L5-CONSULADO" id="105" weight="97.0">
+      <edge source="B_0200L5-EDUARDOMOLI" target="B_0200L5-CONSULADO" id="136" weight="97.0">
         <attvalues>
           <attvalue for="1" value="1.62" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-CONSULADO" target="B_0200L5-VALLEGOMEZ" id="106" weight="76.0">
+      <edge source="B_0200L5-CONSULADO" target="B_0200L5-VALLEGOMEZ" id="137" weight="76.0">
         <attvalues>
           <attvalue for="1" value="1.27" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-VALLEGOMEZ" target="B_0200L5-MISTERIOS" id="107" weight="124.0">
+      <edge source="B_0200L5-CONSULADO" target="B_0200L4-CONSULADO" id="138" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L5-VALLEGOMEZ" target="B_0200L5-MISTERIOS" id="139" weight="124.0">
         <attvalues>
           <attvalue for="1" value="2.07" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-MISTERIOS" target="B_0200L5-LARAZA" id="108" weight="100.0">
+      <edge source="B_0200L5-MISTERIOS" target="B_0200L5-LARAZA" id="140" weight="100.0">
         <attvalues>
           <attvalue for="1" value="1.67" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-LARAZA" target="B_0200L5-AUTOBUSESNTE" id="109" weight="114.0">
+      <edge source="B_0200L5-LARAZA" target="B_0200L5-AUTOBUSESNTE" id="141" weight="114.0">
         <attvalues>
           <attvalue for="1" value="1.9" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-AUTOBUSESNTE" target="B_0200L5-ITOPETROLEO" id="110" weight="122.0">
+      <edge source="B_0200L5-LARAZA" target="B_0200L3-LARAZA" id="142" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L5-AUTOBUSESNTE" target="B_0200L5-ITOPETROLEO" id="143" weight="122.0">
         <attvalues>
           <attvalue for="1" value="2.03" />
         </attvalues>
       </edge>
-      <edge source="B_0200L5-ITOPETROLEO" target="B_0200L5-POLITECNICO" id="111" weight="135.0">
+      <edge source="B_0200L5-ITOPETROLEO" target="B_0200L5-POLITECNICO" id="144" weight="135.0">
         <attvalues>
           <attvalue for="1" value="2.25" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-SNTAANITA" target="B_0200L4-JAMAICA" id="112" weight="90.0">
+      <edge source="B_0200L4-SNTAANITA" target="B_0200L4-JAMAICA" id="145" weight="90.0">
         <attvalues>
           <attvalue for="1" value="1.5" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-JAMAICA" target="B_0200L4-FRAYSERVANDO" id="113" weight="121.0">
+      <edge source="B_0200L4-JAMAICA" target="B_0200L4-FRAYSERVANDO" id="146" weight="121.0">
         <attvalues>
           <attvalue for="1" value="2.02" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-FRAYSERVANDO" target="B_0200L4-CANDELARIA" id="114" weight="81.0">
+      <edge source="B_0200L4-FRAYSERVANDO" target="B_0200L4-CANDELARIA" id="147" weight="81.0">
         <attvalues>
           <attvalue for="1" value="1.35" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-CANDELARIA" target="B_0200L4-MORELOS" id="115" weight="124.0">
+      <edge source="B_0200L4-CANDELARIA" target="B_0200L4-MORELOS" id="148" weight="124.0">
         <attvalues>
           <attvalue for="1" value="2.07" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-MORELOS" target="B_0200L4-CANALNTE" id="116" weight="107.0">
+      <edge source="B_0200L4-CANDELARIA" target="B_0200L1-CANDELARIA" id="149" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L4-MORELOS" target="B_0200L4-CANALNTE" id="150" weight="107.0">
         <attvalues>
           <attvalue for="1" value="1.78" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-CANALNTE" target="B_0200L4-CONSULADO" id="117" weight="105.0">
+      <edge source="B_0200L4-CANALNTE" target="B_0200L4-CONSULADO" id="151" weight="105.0">
         <attvalues>
           <attvalue for="1" value="1.75" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-CONSULADO" target="B_0200L4-BONDOJITO" id="118" weight="77.0">
+      <edge source="B_0200L4-CONSULADO" target="B_0200L4-BONDOJITO" id="152" weight="77.0">
         <attvalues>
           <attvalue for="1" value="1.28" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-BONDOJITO" target="B_0200L4-TALISMAN" id="119" weight="118.0">
+      <edge source="B_0200L4-BONDOJITO" target="B_0200L4-TALISMAN" id="153" weight="118.0">
         <attvalues>
           <attvalue for="1" value="1.97" />
         </attvalues>
       </edge>
-      <edge source="B_0200L4-TALISMAN" target="B_0200L4-MARTINCARR" id="120" weight="129.0">
+      <edge source="B_0200L4-TALISMAN" target="B_0200L4-MARTINCARR" id="154" weight="129.0">
         <attvalues>
           <attvalue for="1" value="2.15" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-UNIVERSIDAD" target="B_0200L3-COPILCO" id="121" weight="158.0">
+      <edge source="B_0200L3-UNIVERSIDAD" target="B_0200L3-COPILCO" id="155" weight="158.0">
         <attvalues>
           <attvalue for="1" value="2.63" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-COPILCO" target="B_0200L3-MAQ" id="122" weight="162.0">
+      <edge source="B_0200L3-COPILCO" target="B_0200L3-MAQ" id="156" weight="162.0">
         <attvalues>
           <attvalue for="1" value="2.7" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-MAQ" target="B_0200L3-VIVEROS" id="123" weight="108.0">
+      <edge source="B_0200L3-MAQ" target="B_0200L3-VIVEROS" id="157" weight="108.0">
         <attvalues>
           <attvalue for="1" value="1.8" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-VIVEROS" target="B_0200L3-COYOACAN" id="124" weight="114.0">
+      <edge source="B_0200L3-VIVEROS" target="B_0200L3-COYOACAN" id="158" weight="114.0">
         <attvalues>
           <attvalue for="1" value="1.9" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-COYOACAN" target="B_0200L3-ZAPATA" id="125" weight="140.0">
+      <edge source="B_0200L3-COYOACAN" target="B_0200L3-ZAPATA" id="159" weight="140.0">
         <attvalues>
           <attvalue for="1" value="2.33" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-ZAPATA" target="B_0200L3-DIVISIONNTE" id="126" weight="113.0">
+      <edge source="B_0200L3-ZAPATA" target="B_0200L3-DIVISIONNTE" id="160" weight="113.0">
         <attvalues>
           <attvalue for="1" value="1.88" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-DIVISIONNTE" target="B_0200L3-EUGENIA" id="127" weight="89.0">
+      <edge source="B_0200L3-DIVISIONNTE" target="B_0200L3-EUGENIA" id="161" weight="89.0">
         <attvalues>
           <attvalue for="1" value="1.48" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-EUGENIA" target="B_0200L3-ETIOPIA" id="128" weight="119.0">
+      <edge source="B_0200L3-EUGENIA" target="B_0200L3-ETIOPIA" id="162" weight="119.0">
         <attvalues>
           <attvalue for="1" value="1.98" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-ETIOPIA" target="B_0200L3-CENTROMEDICO" id="129" weight="144.0">
+      <edge source="B_0200L3-ETIOPIA" target="B_0200L3-CENTROMEDICO" id="163" weight="144.0">
         <attvalues>
           <attvalue for="1" value="2.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-CENTROMEDICO" target="B_0200L3-HOSPITALGRAL" id="130" weight="82.0">
+      <edge source="B_0200L3-CENTROMEDICO" target="B_0200L3-HOSPITALGRAL" id="164" weight="82.0">
         <attvalues>
           <attvalue for="1" value="1.37" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-HOSPITALGRAL" target="B_0200L3-NINOSHEROES" id="131" weight="85.0">
+      <edge source="B_0200L3-HOSPITALGRAL" target="B_0200L3-NINOSHEROES" id="165" weight="85.0">
         <attvalues>
           <attvalue for="1" value="1.42" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-NINOSHEROES" target="B_0200L3-BALDERAS" id="132" weight="86.0">
+      <edge source="B_0200L3-NINOSHEROES" target="B_0200L3-BALDERAS" id="166" weight="86.0">
         <attvalues>
           <attvalue for="1" value="1.43" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-BALDERAS" target="B_0200L3-JUAREZ" id="133" weight="84.0">
+      <edge source="B_0200L3-BALDERAS" target="B_0200L3-JUAREZ" id="167" weight="84.0">
         <attvalues>
           <attvalue for="1" value="1.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-JUAREZ" target="B_0200L3-HIDALGO" id="134" weight="51.0">
+      <edge source="B_0200L3-BALDERAS" target="B_0200L1-BALDERAS" id="168" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L3-JUAREZ" target="B_0200L3-HIDALGO" id="169" weight="51.0">
         <attvalues>
           <attvalue for="1" value="0.85" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-HIDALGO" target="B_0200L3-GUERRERO" id="135" weight="91.0">
+      <edge source="B_0200L3-HIDALGO" target="B_0200L3-GUERRERO" id="170" weight="91.0">
         <attvalues>
           <attvalue for="1" value="1.52" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-GUERRERO" target="B_0200L3-TLATELOLCO" id="136" weight="128.0">
+      <edge source="B_0200L3-HIDALGO" target="B_0200L2-HIDALGO" id="171" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L3-GUERRERO" target="B_0200L3-TLATELOLCO" id="172" weight="128.0">
         <attvalues>
           <attvalue for="1" value="2.13" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-TLATELOLCO" target="B_0200L3-LARAZA" id="137" weight="179.0">
+      <edge source="B_0200L3-TLATELOLCO" target="B_0200L3-LARAZA" id="173" weight="179.0">
         <attvalues>
           <attvalue for="1" value="2.98" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-LARAZA" target="B_0200L3-POTRERO" id="138" weight="133.0">
+      <edge source="B_0200L3-LARAZA" target="B_0200L3-POTRERO" id="174" weight="133.0">
         <attvalues>
           <attvalue for="1" value="2.22" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-POTRERO" target="B_0200L3-DTVO18MARZO" id="139" weight="122.0">
+      <edge source="B_0200L3-POTRERO" target="B_0200L3-DTVO18MARZO" id="175" weight="122.0">
         <attvalues>
           <attvalue for="1" value="2.03" />
         </attvalues>
       </edge>
-      <edge source="B_0200L3-DTVO18MARZO" target="B_0200L3-INDIOSVERD" id="140" weight="145.0">
+      <edge source="B_0200L3-DTVO18MARZO" target="B_0200L3-INDIOSVERD" id="176" weight="145.0">
         <attvalues>
           <attvalue for="1" value="2.42" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-TASQUENA" target="B_0200L2-GRALANAYA" id="141" weight="167.0">
+      <edge source="B_0200L2-TASQUENA" target="B_0200L2-GRALANAYA" id="177" weight="167.0">
         <attvalues>
           <attvalue for="1" value="2.78" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-GRALANAYA" target="B_0200L2-ERMITA" id="142" weight="110.0">
+      <edge source="B_0200L2-GRALANAYA" target="B_0200L2-ERMITA" id="178" weight="110.0">
         <attvalues>
           <attvalue for="1" value="1.83" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-ERMITA" target="B_0200L2-PORTALES" id="143" weight="99.0">
+      <edge source="B_0200L2-ERMITA" target="B_0200L2-PORTALES" id="179" weight="99.0">
         <attvalues>
           <attvalue for="1" value="1.65" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-PORTALES" target="B_0200L2-NATIVITAS" id="144" weight="126.0">
+      <edge source="B_0200L2-PORTALES" target="B_0200L2-NATIVITAS" id="180" weight="126.0">
         <attvalues>
           <attvalue for="1" value="2.1" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-NATIVITAS" target="B_0200L2-VILLADECORT" id="145" weight="93.0">
+      <edge source="B_0200L2-NATIVITAS" target="B_0200L2-VILLADECORT" id="181" weight="93.0">
         <attvalues>
           <attvalue for="1" value="1.55" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-VILLADECORT" target="B_0200L2-XOLA" id="146" weight="95.0">
+      <edge source="B_0200L2-VILLADECORT" target="B_0200L2-XOLA" id="182" weight="95.0">
         <attvalues>
           <attvalue for="1" value="1.58" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-XOLA" target="B_0200L2-VIADUCTO" id="147" weight="70.0">
+      <edge source="B_0200L2-XOLA" target="B_0200L2-VIADUCTO" id="183" weight="70.0">
         <attvalues>
           <attvalue for="1" value="1.17" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-VIADUCTO" target="B_0200L2-CHABACANO" id="148" weight="103.0">
+      <edge source="B_0200L2-VIADUCTO" target="B_0200L2-CHABACANO" id="184" weight="103.0">
         <attvalues>
           <attvalue for="1" value="1.72" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-CHABACANO" target="B_0200L2-SANANTONIO" id="149" weight="85.0">
+      <edge source="B_0200L2-CHABACANO" target="B_0200L2-SANANTONIO" id="185" weight="85.0">
         <attvalues>
           <attvalue for="1" value="1.42" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-SANANTONIO" target="B_0200L2-PINOSUAREZ" id="150" weight="108.0">
+      <edge source="B_0200L2-SANANTONIO" target="B_0200L2-PINOSUAREZ" id="186" weight="108.0">
         <attvalues>
           <attvalue for="1" value="1.8" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-PINOSUAREZ" target="B_0200L2-ZOCALO" id="151" weight="100.0">
+      <edge source="B_0200L2-PINOSUAREZ" target="B_0200L2-ZOCALO" id="187" weight="100.0">
         <attvalues>
           <attvalue for="1" value="1.67" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-ZOCALO" target="B_0200L2-ALLENDE" id="152" weight="83.0">
+      <edge source="B_0200L2-PINOSUAREZ" target="B_0200L1-PINOSUAREZ" id="188" weight="5.0">
+        <attvalues>
+          <attvalue for="1" value="5.0" />
+          <attvalue for="2" value="transbordo" />
+        </attvalues>
+      </edge>
+      <edge source="B_0200L2-ZOCALO" target="B_0200L2-ALLENDE" id="189" weight="83.0">
         <attvalues>
           <attvalue for="1" value="1.38" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-ALLENDE" target="B_0200L2-BELLASARTES" id="153" weight="56.0">
+      <edge source="B_0200L2-ALLENDE" target="B_0200L2-BELLASARTES" id="190" weight="56.0">
         <attvalues>
           <attvalue for="1" value="0.93" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-BELLASARTES" target="B_0200L2-HIDALGO" id="154" weight="67.0">
+      <edge source="B_0200L2-BELLASARTES" target="B_0200L2-HIDALGO" id="191" weight="67.0">
         <attvalues>
           <attvalue for="1" value="1.12" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-HIDALGO" target="B_0200L2-REVOLUCION" id="155" weight="84.0">
+      <edge source="B_0200L2-HIDALGO" target="B_0200L2-REVOLUCION" id="192" weight="84.0">
         <attvalues>
           <attvalue for="1" value="1.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-REVOLUCION" target="B_0200L2-SANCOSME" id="156" weight="82.0">
+      <edge source="B_0200L2-REVOLUCION" target="B_0200L2-SANCOSME" id="193" weight="82.0">
         <attvalues>
           <attvalue for="1" value="1.37" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-SANCOSME" target="B_0200L2-NORMAL" id="157" weight="84.0">
+      <edge source="B_0200L2-SANCOSME" target="B_0200L2-NORMAL" id="194" weight="84.0">
         <attvalues>
           <attvalue for="1" value="1.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-NORMAL" target="B_0200L2-COLMILITAR" id="158" weight="80.0">
+      <edge source="B_0200L2-NORMAL" target="B_0200L2-COLMILITAR" id="195" weight="80.0">
         <attvalues>
           <attvalue for="1" value="1.33" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-COLMILITAR" target="B_0200L2-POPOTLA" id="159" weight="63.0">
+      <edge source="B_0200L2-COLMILITAR" target="B_0200L2-POPOTLA" id="196" weight="63.0">
         <attvalues>
           <attvalue for="1" value="1.05" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-POPOTLA" target="B_0200L2-CUITLAHUAC" id="160" weight="88.0">
+      <edge source="B_0200L2-POPOTLA" target="B_0200L2-CUITLAHUAC" id="197" weight="88.0">
         <attvalues>
           <attvalue for="1" value="1.47" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-CUITLAHUAC" target="B_0200L2-TACUBA" id="161" weight="84.0">
+      <edge source="B_0200L2-CUITLAHUAC" target="B_0200L2-TACUBA" id="198" weight="84.0">
         <attvalues>
           <attvalue for="1" value="1.4" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-TACUBA" target="B_0200L2-PANTEONES" id="162" weight="175.0">
+      <edge source="B_0200L2-TACUBA" target="B_0200L2-PANTEONES" id="199" weight="175.0">
         <attvalues>
           <attvalue for="1" value="2.92" />
         </attvalues>
       </edge>
-      <edge source="B_0200L2-PANTEONES" target="B_0200L2-CUATROCAMIN" id="163" weight="199.0">
+      <edge source="B_0200L2-PANTEONES" target="B_0200L2-CUATROCAMIN" id="200" weight="199.0">
         <attvalues>
           <attvalue for="1" value="3.32" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-PANTITLAN" target="B_0200L1-ZARAGOZA" id="164" weight="168.0">
+      <edge source="B_0200L1-PANTITLAN" target="B_0200L1-ZARAGOZA" id="201" weight="168.0">
         <attvalues>
           <attvalue for="1" value="2.8" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-ZARAGOZA" target="B_0200L1-GOMEZFARIAS" id="165" weight="114.0">
+      <edge source="B_0200L1-ZARAGOZA" target="B_0200L1-GOMEZFARIAS" id="202" weight="114.0">
         <attvalues>
           <attvalue for="1" value="1.9" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-GOMEZFARIAS" target="B_0200L1-PTOAEREO" id="166" weight="87.0">
+      <edge source="B_0200L1-GOMEZFARIAS" target="B_0200L1-PTOAEREO" id="203" weight="87.0">
         <attvalues>
           <attvalue for="1" value="1.45" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-PTOAEREO" target="B_0200L1-BALBUENA" id="167" weight="92.0">
+      <edge source="B_0200L1-PTOAEREO" target="B_0200L1-BALBUENA" id="204" weight="92.0">
         <attvalues>
           <attvalue for="1" value="1.53" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-BALBUENA" target="B_0200L1_MOCTEZUMA" id="168" weight="98.0">
+      <edge source="B_0200L1-BALBUENA" target="B_0200L1_MOCTEZUMA" id="205" weight="98.0">
         <attvalues>
           <attvalue for="1" value="1.63" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1_MOCTEZUMA" target="B_0200L1-SANLAZARO" id="169" weight="71.0">
+      <edge source="B_0200L1_MOCTEZUMA" target="B_0200L1-SANLAZARO" id="206" weight="71.0">
         <attvalues>
           <attvalue for="1" value="1.18" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-SANLAZARO" target="B_0200L1-CANDELARIA" id="170" weight="124.0">
+      <edge source="B_0200L1-SANLAZARO" target="B_0200L1-CANDELARIA" id="207" weight="124.0">
         <attvalues>
           <attvalue for="1" value="2.07" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-CANDELARIA" target="B_0200L1-MERCED" id="171" weight="101.0">
+      <edge source="B_0200L1-CANDELARIA" target="B_0200L1-MERCED" id="208" weight="101.0">
         <attvalues>
           <attvalue for="1" value="1.68" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-MERCED" target="B_0200L1-PINOSUAREZ" id="172" weight="96.0">
+      <edge source="B_0200L1-MERCED" target="B_0200L1-PINOSUAREZ" id="209" weight="96.0">
         <attvalues>
           <attvalue for="1" value="1.6" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-PINOSUAREZ" target="B_0200L1-ISABELLACA" id="173" weight="64.0">
+      <edge source="B_0200L1-PINOSUAREZ" target="B_0200L1-ISABELLACA" id="210" weight="64.0">
         <attvalues>
           <attvalue for="1" value="1.07" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-ISABELLACA" target="B_0200L1-SALTODELAGUA" id="174" weight="69.0">
+      <edge source="B_0200L1-ISABELLACA" target="B_0200L1-SALTODELAGUA" id="211" weight="69.0">
         <attvalues>
           <attvalue for="1" value="1.15" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-SALTODELAGUA" target="B_0200L1-BALDERAS" id="175" weight="76.0">
+      <edge source="B_0200L1-SALTODELAGUA" target="B_0200L1-BALDERAS" id="212" weight="76.0">
         <attvalues>
           <attvalue for="1" value="1.27" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-BALDERAS" target="B_0200L1-CUAUHTEMOC" id="176" weight="65.0">
+      <edge source="B_0200L1-BALDERAS" target="B_0200L1-CUAUHTEMOC" id="213" weight="65.0">
         <attvalues>
           <attvalue for="1" value="1.08" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-CUAUHTEMOC" target="B_0200L1-INSURGENTES" id="177" weight="111.0">
+      <edge source="B_0200L1-CUAUHTEMOC" target="B_0200L1-INSURGENTES" id="214" weight="111.0">
         <attvalues>
           <attvalue for="1" value="1.85" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-INSURGENTES" target="B_0200L1-SEVILLA" id="178" weight="99.0">
+      <edge source="B_0200L1-INSURGENTES" target="B_0200L1-SEVILLA" id="215" weight="99.0">
         <attvalues>
           <attvalue for="1" value="1.65" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-SEVILLA" target="B_0200L1-CHAPULTEPEC" id="179" weight="67.0">
+      <edge source="B_0200L1-SEVILLA" target="B_0200L1-CHAPULTEPEC" id="216" weight="67.0">
         <attvalues>
           <attvalue for="1" value="1.12" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-CHAPULTEPEC" target="B_0200L1-JUANACATLAN" id="180" weight="132.0">
+      <edge source="B_0200L1-CHAPULTEPEC" target="B_0200L1-JUANACATLAN" id="217" weight="132.0">
         <attvalues>
           <attvalue for="1" value="2.2" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-JUANACATLAN" target="B_0200L1-TACUBAYA" id="181" weight="154.0">
+      <edge source="B_0200L1-JUANACATLAN" target="B_0200L1-TACUBAYA" id="218" weight="154.0">
         <attvalues>
           <attvalue for="1" value="2.57" />
         </attvalues>
       </edge>
-      <edge source="B_0200L1-TACUBAYA" target="B_0200L1-OBSERVATORIO" id="182" weight="170.0">
+      <edge source="B_0200L1-TACUBAYA" target="B_0200L1-OBSERVATORIO" id="219" weight="170.0">
         <attvalues>
           <attvalue for="1" value="2.83" />
         </attvalues>

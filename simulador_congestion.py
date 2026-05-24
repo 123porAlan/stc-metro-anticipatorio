@@ -34,7 +34,7 @@ print("Iniciando motor de simulación horaria...")
 
 # Supongamos una capacidad base teórica por hora para las estaciones. 
 # En tu tesis puedes refinar esto dependiendo de la línea.
-CAPACIDAD_PROMEDIO_HORA = 1000
+CAPACIDAD_PROMEDIO_HORA = 25000
 
 # Diccionario para almacenar los estados de la red en cada hora
 grafos_temporales = {}
@@ -63,6 +63,12 @@ for hora in horas_operacion:
         # Obtenemos la afluencia de la estación de origen en esta hora
         # Si no hay datos, asumimos 0 (sin congestión)
         pasajeros_origen = afluencia_dict.get(nombre_origen, 0)
+
+
+        # --- SIMULACIÓN DE DISRUPCIÓN PARA LA TESIS ---
+        # Si es de 7 a 9 AM, simulamos que la Línea 9 (Puebla, Velódromo, etc.) sufre una falla de trenes
+        if 7 <= hora <= 9 and "B_0200L9" in u:
+            pasajeros_origen += 40000 # Inyectamos un colapso masivo solo en esta línea
 
         # Pon esto temporalmente dentro del loop de aristas:
         if nombre_origen == "Pantitlán" and hora == 7:
@@ -100,3 +106,72 @@ for vecino in G_base.neighbors(nodo_pantitlan):
     print(f"  - Base Ideal:   {tiempo_base} mins")
     print(f"  - Valle (11AM): {tiempo_11am} mins")
     print(f"  - Pico (7AM):   {tiempo_7am} mins")
+
+
+# --- Lo siguiente es mi data pipeline ---
+
+print("\nExtrayendo características tabulares para Machine Learning...")
+
+datos_ml = []
+horas_disponibles = sorted(list(grafos_temporales.keys()))
+
+# Recorremos cada hora simulada
+for i, hora_actual in enumerate(horas_disponibles):
+    
+    # Para predecir (target), necesitamos la hora siguiente. 
+    # Si no hay hora siguiente (ej. a las 23:00), no podemos crear target, así que la saltamos.
+    if i + 1 >= len(horas_disponibles):
+        continue
+        
+    # Para tener 'lags' (memoria pasada), necesitamos al menos 1 hora anterior.
+    # Si es la primera hora del día (5:00), la saltamos porque no tenemos datos de las 4:00.
+    if i < 1:
+        continue
+        
+    hora_siguiente = horas_disponibles[i + 1]
+    hora_pasada = horas_disponibles[i - 1]
+    
+    G_actual = grafos_temporales[hora_actual]
+    G_pasado = grafos_temporales[hora_pasada]
+    G_siguiente = grafos_temporales[hora_siguiente]
+    
+    # Recorremos cada tramo (arista) de la red
+    for u, v, data in G_actual.edges(data=True):
+        nombre_origen = G_actual.nodes[u].get('nombre', str(u))
+        nombre_destino = G_actual.nodes[v].get('nombre', str(v))
+        tramo_id = f"{nombre_origen}-{nombre_destino}"
+        
+        tiempo_ideal = data.get('tiempo_minutos', 0)
+        
+        # Extraemos el retraso (congestibilidad) en t (presente)
+        congest_actual = data.get('congestibilidad', 0)
+        
+        # Extraemos el retraso en t-1 (pasado)
+        congest_pasada = G_pasado[u][v].get('congestibilidad', 0) if G_pasado.has_edge(u, v) else 0
+        
+        # Extraemos el retraso en t+1 (FUTURO / TARGET)
+        congest_futura = G_siguiente[u][v].get('congestibilidad', 0) if G_siguiente.has_edge(u, v) else 0
+        
+        # Guardamos la fila tabular
+        datos_ml.append({
+            'fecha': fecha_simulacion,
+            'hora': hora_actual,
+            'nodo_origen': u,
+            'nodo_destino': v,
+            'tramo': tramo_id,
+            'origen': nombre_origen,
+            'tiempo_ideal': tiempo_ideal,
+            'congestibilidad_t_minus_1': congest_pasada,
+            'congestibilidad_t': congest_actual,
+            'target_congestibilidad_t_plus_1': congest_futura
+        })
+
+# Convertimos a DataFrame
+df_ml = pd.DataFrame(datos_ml)
+
+# Guardamos el CSV tabular
+archivo_dataset = "datos_procesados/dataset_features_entrenamiento.csv"
+df_ml.to_csv(archivo_dataset, index=False, encoding='utf-8-sig')
+
+print(f"Dataset tabular generado exitosamente con {len(df_ml)} registros de entrenamiento.")
+print(f"Guardado en: {archivo_dataset}")
